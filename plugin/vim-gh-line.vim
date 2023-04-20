@@ -34,7 +34,11 @@ if !exists('g:gh_open_command')
     endif
 endif
 
-if !exists('g:gh_repo_map')
+if !exists('g:gh_repo_map_default')
+    let g:gh_repo_map_default = 1
+endif
+
+if !exists('g:gh_repo_map') && g:gh_repo_map_default == 1
     let g:gh_repo_map = '<leader>go'
 endif
 
